@@ -1,9 +1,9 @@
 import com.typesafe.sbt.SbtMultiJvm.multiJvmSettings
 import com.typesafe.sbt.SbtMultiJvm.MultiJvmKeys.MultiJvm
 
-val akkaVersion = "2.5.6"
+val akkaVersion = "2.5.11"
 
-val akkaHttpVersion = "10.0.10"
+val akkaHttpVersion = "10.0.11"
 
 val elastic4sVersion = "5.5.3"      // 5.5.3
 
@@ -21,6 +21,7 @@ val `akka-sample-distributed-data-scala` = project
       "com.typesafe.akka" %% "akka-actor" % akkaVersion,
       "com.typesafe.akka" %% "akka-remote" % akkaVersion,
       "com.typesafe.akka" %% "akka-cluster" % akkaVersion,
+        "com.typesafe.akka" %% "akka-cluster-sharding" % akkaVersion,
       "com.typesafe.akka" %% "akka-persistence" % akkaVersion,
       "com.typesafe.akka" %% "akka-distributed-data" % akkaVersion,
       "com.typesafe.akka" %% "akka-multi-node-testkit" % akkaVersion,
@@ -33,7 +34,7 @@ val `akka-sample-distributed-data-scala` = project
       "com.h2database"  %  "h2" % "1.4.196",
       "com.typesafe.slick" %% "slick" % "3.2.1",
       "com.chuusai" %% "shapeless" % "2.3.2",
-      "org.typelevel" %% "cats" % "0.9.0",
+      "org.typelevel" %% "cats" % "1.0.1",
       "org.typelevel" %% "spire" % "0.14.1",
       "org.scalaz" %% "scalaz-core" % "7.2.15",
       "org.scalaz" %% "scalaz-concurrent" % "7.2.15",
